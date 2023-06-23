@@ -1,5 +1,12 @@
 ---
 title: "Hello, Quarto"
+subtitle: 'R4CR Quarto 실습'
+categories: [Quarto, palmerpenguins, R]
+date: last-modified
+author: Wongook Wi
+toc: true
+toc-depth: 3
+toc-location: right
 format: html
 editor: visual
 ---
@@ -41,3 +48,34 @@ ggplot(penguins,
   ) +
   theme_minimal()
 ```
+
+```{r}
+#| eval: true
+#| echo: true
+
+x <- 2
+y <- 3
+
+print(x + y)
+```
+
+## Default
+```{r}
+head(iris)
+```
+
+## Kable
+```{r}
+knitr::kable(head(iris))
+```
+
+## Reactable
+```{r}
+reactable::reactable(head(iris))
+```
+
+## DT
+```{r}
+DT::datatable(head(iris))
+```
+
